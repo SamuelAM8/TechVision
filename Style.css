@@ -1,0 +1,346 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f39c12 ;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;   
+}
+
+
+
+header nav{
+    display: flex;
+    gap: 20px;
+}
+img.logo {
+    width: 100px; 
+    height: auto; 
+}
+header h2.logo {
+    color: white;
+    font-weight: bold;
+}
+
+header .mostrar-menu {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    
+}
+header nav a {
+    margin: 0; 
+}
+
+header nav a:hover {
+    color: #74C0FC;
+
+}
+
+
+.esconder-menu {
+    display: none; 
+}
+.menu-checkbox{display: none;}
+
+/* Menú en celulares */
+@media (max-width: 768px) {
+    header .mostrar-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0077b6;
+        text-align: center;
+    }
+
+    .menu a {
+        padding: 10px 0;
+    }
+
+    #check:checked ~ .menu {
+        display: flex;
+    }
+    #iconos .contenido-iconos {
+        display: flex;
+        justify-content: right;
+        gap: 40px;
+        flex-wrap: wrap;
+        
+    }
+    #personas {
+        flex-direction: column; 
+        align-items: center;  
+    }
+
+    #personas div {
+        width: 90%; 
+       
+    }
+    
+    #banner {
+      
+        margin-bottom: 5px;
+    }
+
+    
+    
+}
+
+/* Banner */
+#banner {
+    height: 60vh;
+    background: 
+                url(Imagenes/pp.jpg) no-repeat center/cover;
+    background-image: url(Imagenes/pp.jpg) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  
+}
+#personas div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Asegura que tome toda la altura asignada */
+}
+
+#personas div a {
+    text-decoration: none; /* Evita subrayados en los textos */
+    color: inherit; /* Mantiene el color heredado */
+}
+
+
+
+
+.contenido-banner h3 {
+    font-size: 2.5rem;
+}
+
+.boton-empezar {
+    background-color: #74C0FC;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition:  0.3s;
+}
+
+.boton-empezar:hover {
+    background-color: #0077b6;
+}
+
+/* Sección Personas */
+#personas {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    padding: 40px;
+    background-color: #e0e0e0;
+}
+
+#personas div {
+    text-align: center;
+    max-width: 300px;
+}
+
+#personas img {
+    width: 100%;
+    border-radius: 10px;
+}
+#personas div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Asegura que tome toda la altura asignada */
+}
+
+#personas div a {
+    text-decoration: none; /* Evita subrayados en los textos */
+    color: inherit; /* Mantiene el color heredado */
+}
+
+#personas div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Asegura que los colores del texto no cambien */
+}
+
+#personas i {
+    margin-bottom: 10px; /* Espaciado entre el ícono y el texto */
+}
+
+
+.boton-saber-mas {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition:  0.3s;
+}
+
+.boton-saber-mas:hover {
+    background-color: #005f86;
+}
+
+/* Sección Iconos */
+#iconos {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+#iconos .contenido-iconos {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    
+}
+
+#iconos div {
+    max-width: 4000px;
+    text-align: center;
+}
+
+.boton-iconos {
+    margin-top: 50px; /* Separamos el botón de los iconos */
+}
+
+/* Formulario de Login */
+.login-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    z-index: 1001;
+}
+
+.login-container.show {
+    display: block;
+}
+
+#btn-ingresar, #btn-cerrar {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+#btn-ingresar {
+    background-color: #0077b6;
+    color: white;
+}
+
+#btn-ingresar:hover {
+    background-color: #005f86;
+}
+
+#btn-cerrar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#btn-cerrar:hover {
+    background-color: #c0392b;
+}
+
+/* Sección Contacto */
+#contacto {
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+#contacto h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.datos-form {
+    display: flex;
+    
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.datos-form div {
+    flex: 1;
+    min-width: 300px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.boton-formulario {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0077b6;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
